@@ -1,25 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-11-08T21:25:12 ICT" name="Default suite" finished-at="2023-11-08T21:25:15 ICT" duration-ms="3614">
+  <suite started-at="2023-11-23T22:31:25 ICT" name="Default suite" finished-at="2023-11-23T22:31:36 ICT" duration-ms="11933">
     <groups>
     </groups>
-    <test started-at="2023-11-08T21:25:12 ICT" name="Default test" finished-at="2023-11-08T21:25:15 ICT" duration-ms="3614">
-      <class name="automation.testsuite.Day8_HW">
-        <test-method is-config="true" signature="openChrome()[pri:0, instance:automation.testsuite.Day8_HW@4f2b503c]" started-at="2023-11-08T21:25:12 ICT" name="openChrome" finished-at="2023-11-08T21:25:15 ICT" duration-ms="3341" status="PASS">
+    <test started-at="2023-11-23T22:31:25 ICT" name="Default test" finished-at="2023-11-23T22:31:36 ICT" duration-ms="11933">
+      <class name="automation.testsuite.Day12_HW">
+        <test-method is-config="true" signature="openChrome()[pri:0, instance:automation.testsuite.Day12_HW@bae7dc0]" started-at="2023-11-23T22:31:25 ICT" name="openChrome" finished-at="2023-11-23T22:31:27 ICT" duration-ms="2408" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openChrome -->
-        <test-method signature="getLocatorByText()[pri:0, instance:automation.testsuite.Day8_HW@4f2b503c]" started-at="2023-11-08T21:25:15 ICT" name="getLocatorByText" finished-at="2023-11-08T21:25:15 ICT" duration-ms="112" status="PASS">
+        <test-method signature="ClickOnRadio()[pri:0, instance:automation.testsuite.Day12_HW@bae7dc0]" started-at="2023-11-23T22:31:27 ICT" name="ClickOnRadio" finished-at="2023-11-23T22:31:34 ICT" duration-ms="7124" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getLocatorByText -->
-        <test-method is-config="true" signature="closeChromeDriver()[pri:0, instance:automation.testsuite.Day8_HW@4f2b503c]" started-at="2023-11-08T21:25:15 ICT" name="closeChromeDriver" finished-at="2023-11-08T21:25:15 ICT" duration-ms="130" status="PASS">
+        </test-method> <!-- ClickOnRadio -->
+        <test-method is-config="true" signature="closeChromeDriver()[pri:0, instance:automation.testsuite.Day12_HW@bae7dc0]" started-at="2023-11-23T22:31:34 ICT" name="closeChromeDriver" finished-at="2023-11-23T22:31:34 ICT" duration-ms="156" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeChromeDriver -->
-      </class> <!-- automation.testsuite.Day8_HW -->
+        <test-method is-config="true" signature="openChrome()[pri:0, instance:automation.testsuite.Day12_HW@bae7dc0]" started-at="2023-11-23T22:31:34 ICT" name="openChrome" finished-at="2023-11-23T22:31:36 ICT" duration-ms="1513" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openChrome -->
+        <test-method signature="ClickOnState()[pri:0, instance:automation.testsuite.Day12_HW@bae7dc0]" started-at="2023-11-23T22:31:36 ICT" name="ClickOnState" finished-at="2023-11-23T22:31:36 ICT" duration-ms="553" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ClickOnState -->
+        <test-method is-config="true" signature="closeChromeDriver()[pri:0, instance:automation.testsuite.Day12_HW@bae7dc0]" started-at="2023-11-23T22:31:36 ICT" name="closeChromeDriver" finished-at="2023-11-23T22:31:36 ICT" duration-ms="145" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeChromeDriver -->
+      </class> <!-- automation.testsuite.Day12_HW -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
