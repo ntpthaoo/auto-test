@@ -1,5 +1,6 @@
 package automation.testsuite;
 
+import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
@@ -16,24 +17,23 @@ import automation.page.LoginPage;
 import automation.page.LoginPage_Factory;
 import automation.page.TrizzenPage;
 
-public class TrizzenTest extends CommonBase{
+public class DAY16_02 extends CommonBase{
 	@BeforeMethod
 	public void openChrome() {
-		driver = initChromeDriver(CT_Account.Trizen_URL);
+		driver = initChromeDriver(CT_Account.Demo_Automation);
 	}
-	@Test(priority =1)
-	public void TestDateAndTime() throws InterruptedException  {
-		TrizzenPage trizzen = new TrizzenPage(driver);
-		trizzen.HandleDateAndTimeDroplist();
-	}
-	@Test(priority =1)
-	public void SearchFilghts() throws InterruptedException  {
-		TrizzenPage trizzen = new TrizzenPage(driver);
-		trizzen.Search();
-		assertTrue(driver.findElement(CT_Account.SEARCH_RESULT).isDisplayed());
+	@Test
+	public void ClickAlert() {
+		click(By.xpath("//a[text()='Alert with Textbox ']"));
+		click(By.xpath("//button[@class='btn btn-info']"));
+		driver.switchTo().alert().sendKeys("Hello");
+		driver.switchTo().alert().accept();
+		assertTrue(isElementPresent(By.xpath("//p[text()='Hello Hello How are you today']")));
+
 	}
 	@AfterMethod // testNG annotation
 	public void closeChromeDriver() {
-		//driver.close();
+		driver.close();
 	}
+	
 }

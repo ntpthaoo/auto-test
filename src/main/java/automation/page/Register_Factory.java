@@ -1,5 +1,7 @@
 package automation.page;
 
+import static org.testng.Assert.assertEquals;
+
 import java.time.Duration;
 
 import org.openqa.selenium.By;
@@ -103,7 +105,7 @@ public class Register_Factory {
 		
 	}
 	
-	public void ChangePassword(String passValue, String newpass, String ReNewPass) {
+	public void ChangePassword(String passValue, String newpass, String ReNewPass) throws InterruptedException {
 		userProfile.click();
 		btnChinhSua.click();
 		JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -112,7 +114,11 @@ public class Register_Factory {
 		txtnewpass.sendKeys(newpass);
 		txtrenewpass.sendKeys(ReNewPass);
 		btnSaveNewPass.click();
-		//driver.switchTo().alert().accept();
+		Thread.sleep(3000);
+		String msgConfirm = driver.switchTo().alert().getText();
+		assertEquals(msgConfirm, "Cập nhật mật khẩu mới thành công!");
+		driver.switchTo().alert().accept();
+
 		
 	}
 }

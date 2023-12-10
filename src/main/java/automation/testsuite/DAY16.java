@@ -1,5 +1,6 @@
 package automation.testsuite;
 
+import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
@@ -16,24 +17,26 @@ import automation.page.LoginPage;
 import automation.page.LoginPage_Factory;
 import automation.page.TrizzenPage;
 
-public class TrizzenTest extends CommonBase{
+public class DAY16 extends CommonBase{
 	@BeforeMethod
 	public void openChrome() {
-		driver = initChromeDriver(CT_Account.Trizen_URL);
+		driver = initChromeDriver(CT_Account.Demo_Guru99);
 	}
-	@Test(priority =1)
-	public void TestDateAndTime() throws InterruptedException  {
-		TrizzenPage trizzen = new TrizzenPage(driver);
-		trizzen.HandleDateAndTimeDroplist();
-	}
-	@Test(priority =1)
-	public void SearchFilghts() throws InterruptedException  {
-		TrizzenPage trizzen = new TrizzenPage(driver);
-		trizzen.Search();
-		assertTrue(driver.findElement(CT_Account.SEARCH_RESULT).isDisplayed());
+	@Test
+	public void deleteCustomerSuccessfully() {
+		type(By.xpath("//input[@name='cusid']"),"1234");
+		click(By.xpath("//input[@name='submit']"));
+		String msgConfirm = driver.switchTo().alert().getText();
+		assertEquals(msgConfirm, "Do you really want to delete this Customer?");
+		driver.switchTo().alert().accept();
+		String msgNoti = driver.switchTo().alert().getText();
+		assertEquals(msgNoti, "Customer Successfully Delete!");
+
+
 	}
 	@AfterMethod // testNG annotation
 	public void closeChromeDriver() {
-		//driver.close();
+		driver.close();
 	}
+	
 }

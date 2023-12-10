@@ -31,7 +31,7 @@ public class HWDAY14_Factory extends CommonBase{
 	@Test(priority =2)
 	public void ChangePassword() throws InterruptedException  {
 		Register_Factory register = new Register_Factory(driver);
-		register.LoginFunction("test1_day14@demo.com","123456");
+		register.LoginFunction("ntpthao19.jits@gmail.com","123456");
 		Thread.sleep(2000);
 		register.ChangePassword("123456", "1234567", "1234567");
 	}
