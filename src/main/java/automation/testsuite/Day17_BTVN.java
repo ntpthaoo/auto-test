@@ -11,9 +11,12 @@ import org.testng.annotations.*;
 import automation.common.CommonBase;
 
 public class Day17_BTVN extends CommonBase{
+	@Parameters("browser")
 	@BeforeMethod
-	public void openChrome() {
-		driver = initChromeDriver("https://mediamart.vn/");
+	public void openChrome(@Optional("chrome")String browser) {
+		//driver = initChromeDriver("https://mediamart.vn/");
+		setupDriver(browser);
+		driver.get("https://mediamart.vn/");
 	}
 	@Test
 	public void Click() {
@@ -22,8 +25,6 @@ public class Day17_BTVN extends CommonBase{
 		for(int i =0; i < totalIframe; i++) {
 			//Phương pháp tìm index của Iframe
 			driver.switchTo().frame(i);
-			System.out.println(3);
-
 			int logo = driver.findElements(By.xpath("//div[@class='logo']")).size();
 			System.out.println("Logo zalo: "+logo);
 			//Nếu total khác 0 thì đang đứng tại iframe chứa element mong muốn cần thực thi

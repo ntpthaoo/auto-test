@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [TestSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="AutomationTestProject run on firefox(failed)">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="automation.testsuite.Day18_BTVN">
+        <methods>
+          <include name="openChrome"/>
+          <include name="ClickonZalo"/>
+        </methods>
+      </class> <!-- automation.testsuite.Day18_BTVN -->
+    </classes>
+  </test> <!-- AutomationTestProject run on firefox(failed) -->
+</suite> <!-- Failed suite [TestSuite] -->
